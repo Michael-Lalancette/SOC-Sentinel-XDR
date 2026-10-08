@@ -104,10 +104,10 @@ Chaque fichier `.kql` commence par un en-tête : MITRE, planification, seuil, en
 
 ## 📂 Documentation
 
-👉 [Guide détaillé des phases](GUIDE.md)
-👉 [Requêtes KQL](kql/) : détections, hunting et workbook
-👉 [Automatisation](automation/README.md) : playbook et automation rules
-👉 [Rapports d'incident](rapports/README.md)
+👉 [Guide détaillé des phases](GUIDE.md)  
+👉 [Requêtes KQL](kql/) : détections, hunting et workbook  
+👉 [Automatisation](automation/README.md) : playbook et automation rules  
+👉 [Rapports d'incident](rapports/README.md)  
 
 ```
 SOC-SC200-Lab/
