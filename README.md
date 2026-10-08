@@ -96,7 +96,7 @@ Chaque fichier `.kql` commence par un en-tête : MITRE, planification, seuil, en
 - **Un playbook peut échouer en silence.** Les tags apparaissaient, mais pas le commentaire : erreur 403, parce que la managed identity du playbook n'avait pas le rôle Microsoft Sentinel Responder. Trois identités sont en jeu (la personne, le compte de service Sentinel, la managed identity), chacune avec son propre rôle.
 - **Les tables Defender ne sont pas dans le workspace.** `DeviceNetworkEvents` est vide dans Log Analytics alors qu'Advanced hunting en contient beaucoup. D'où la custom detection Defender XDR pour PowerShell encodé, et le template TI map sur `SigninLogs` plutôt que sur `DeviceNetworkEvents`.
 - **Les échecs RDP avec NLA sont des logons de type 3, pas 10.** Filtrer les 4625 sur le type 10 aurait masqué mes propres tests de brute force.
-- **Quelques mots de passe erronés ne créent pas de risque.** Huit échecs n'ont rien levé dans Identity Protection. Une connexion Tor, si, mais seulement une fois la licence Entra ID P2 assignée à l'utilisateur ciblé.
+- **Quelques mots de passe erronés ne créent pas de risque.** Huit échecs n'ont rien levé dans Identity Protection. Une connexion Tor en a créée une, mais seulement une fois la licence Entra ID P2 assignée à l'utilisateur ciblé.
 - **Limite connue :** `SR - MULTIPLE FAILED LOGONS` détecte le brute force (un compte, plusieurs mots de passe) mais pas le password spray (plusieurs comptes). Une règle groupée par IP source est la prochaine étape.
 
 ---
